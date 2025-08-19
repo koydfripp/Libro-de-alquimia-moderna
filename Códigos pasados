@@ -1,0 +1,25 @@
+docs/
+códigos pasados
+
+
+int sensorValue = 0;
+
+void setup() {
+  pinMode(13, OUTPUT);
+//  pinMode(A4, INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue = analogRead(A0); 
+Serial.println(sensorValue);
+
+  if (sensorValue>1020){  //The 'silence' sensor value is 509-511
+    digitalWrite(13,LOW);
+    delay(1);            // The red LEDs stay on for 2 seconds
+} else {
+    digitalWrite(13,HIGH);
+    delay(100);
+}
+} 
