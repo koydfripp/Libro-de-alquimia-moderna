@@ -10,8 +10,11 @@ Historia de la tecnología, las máquinas, los computadores, programación, etc.
 
 # Referentes artísticos
 Si bien no son parte de lo que podríamos considerar como la institución artírtica, me influencio mucho de bandas para intentar replicar el sonido que tienen (siendo ese mi interés principal, el sonido), ya sean guitarras o sontetizadores, véase: Brainiac, Roxy Music, Drive Like Jehu, etc.
+https://youtu.be/uyFB0GrQdTE?si=eHrAT8HWVTqXcGi4
+
 
 Esos sonidos agresivos y estridentes luego trato de traducirlos a lo que estamos haciendo en la clase, al menos hasta el semestre pasado. Ahora hemos pasado más a terreno de programación con visuales, donde entra mi interés primario (que solo en esta clase queda de lado), la gráfica. Todo lo que es igual de agresivo, angular, y contrastado es lo que me gusta a nivel visual, por eso el semestre anterior usé ácido para un cirtuito, dejando mucho tiempo ahí una placa
+
 # 14/08, Processing
 Me quedé algo atrás cambiando mi código, pero luego en esta misma bitácora haré mi versión de lo que hicimos en clase
 ChatGPT hizo en pocos segundos lo que nos tardamos en una hora de clases luego de reintroducir las nociones de computación, cómo es que funciona la programación (es decir, lo específico que hay que ser cuando se habla con un programa, y el lenguaje del mismo)
