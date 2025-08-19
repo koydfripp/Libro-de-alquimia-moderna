@@ -13,3 +13,24 @@ Si bien no son parte de lo que podríamos considerar como la institución artír
 
 Esos sonidos agresivos y estridentes luego trato de traducirlos a lo que estamos haciendo en la clase, al menos hasta el semestre pasado. Ahora hemos pasado más a terreno de programación con visuales, donde entra mi interés primario (que solo en esta clase queda de lado), la gráfica. Todo lo que es igual de agresivo, angular, y contrastado es lo que me gusta a nivel visual, por eso el semestre anterior usé ácido para un cirtuito, dejando mucho tiempo ahí una placa
 # 14/08, Processing
+Me quedé algo atrás cambiando mi código, pero luego en esta misma bitácora haré mi versión de lo que hicimos en clase
+int cantidad = 0;
+
+
+void setup(){
+  size (700,600);
+  background(50,120,70);
+}
+
+void draw(){
+   background(50,120,70);
+  line (10,200,250,100);
+line (30,10,250,500);
+
+textSize(50);
+text("saludos terricola", 300,500);
+cantidad = cantidad + 1;
+println(cantidad);
+text("tienes" + cantidad + "pesos", 300,550);
+
+}
