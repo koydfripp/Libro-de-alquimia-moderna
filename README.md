@@ -10,7 +10,7 @@ Historia de la tecnología, las máquinas, los computadores, programación, etc.
 
 # Referentes artísticos
 Si bien no son parte de lo que podríamos considerar como la institución artírtica, me influencio mucho de bandas para intentar replicar el sonido que tienen (siendo ese mi interés principal, el sonido), ya sean guitarras o sontetizadores, véase: Brainiac, Roxy Music, Drive Like Jehu, etc.
-https://youtu.be/uyFB0GrQdTE?si=eHrAT8HWVTqXcGi4
+https://youtu.be/uyFB0GrQdTE?si=eHrAT8HWVTqXcGi4 (link a una cancion de Brainiac)
 
 
 Esos sonidos agresivos y estridentes luego trato de traducirlos a lo que estamos haciendo en la clase, al menos hasta el semestre pasado. Ahora hemos pasado más a terreno de programación con visuales, donde entra mi interés primario (que solo en esta clase queda de lado), la gráfica. Todo lo que es igual de agresivo, angular, y contrastado es lo que me gusta a nivel visual, por eso el semestre anterior usé ácido para un cirtuito, dejando mucho tiempo ahí una placa
