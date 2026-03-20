@@ -1,0 +1,27 @@
+use_bpm 92
+
+live_loop :ruido_ambiental do
+  use_synth :noise
+  with_fx :bitcrusher, bits: rrand_i(4, 9), sample_rate: rrand(1000, 4000) do
+    with_fx :reverb, room: 0.5 do
+      synth :noise, release: rrand(0.1, 0.3), amp: rrand(0.1, 0.3)
+    end
+  end
+  sleep rrand(0.5, 0.5)
+end
+
+live_loop :ambiente_distorsionado do
+  with_fx :echo, phase: rrand(0.25, 0.5), decay: 4 do
+    with_fx :distortion, distort: 0.9 do
+      sample :ambi_dark_woosh, rate: rrand(0.5, 1.2), amp: 0.6
+    end
+  end
+  sleep 4
+end
+
+with_fx :distortion, distort: 0.9 do
+  live_loop :ritmo do
+    sample :loop_amen, rate: 0.2, amp: 0.30
+    sleep sample_duration :loop_amen, rate: 1.2
+  end
+end
