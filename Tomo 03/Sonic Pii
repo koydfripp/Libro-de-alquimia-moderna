@@ -1,1 +1,72 @@
+use_bpm 90
+
+live_loop :ciclos_dinamicos do
+  set_volume! 1.0
+  set :modo, :normal
+  sleep rrand_i(8, 12)
+  
+  set_volume! 0.4
+  set :modo, :variacion
+  sleep rrand_i(3, 7)
+end
+
+live_loop :bajo_pesado do
+  modo = get(:modo)
+  note = [:e2, :g2, :d2].choose
+  if modo == :normal
+    use_synth :fm
+    with_fx :distortion, distort: 0.6 do
+      play note, release: 0.4, depth: 3, divisor: 1, amp: 1.2
+    end
+  else
+    use_synth :fm
+    with_fx :echo, phase: 0.25, decay: 3 do
+      play note, release: 0.6, depth: 2, divisor: 2, amp: 0.3
+    end
+  end
+  sleep 0.75
+end
+
+with_fx :distortion, distort: 0.9 do
+  live_loop :ritmo do
+    sample :loop_amen, rate: 0.5, amp: 0.7
+    sleep sample_duration(:loop_amen, rate: 0.5)
+  end
+end
+
+with_fx :reverb, room: 0.9 do
+  live_loop :sintetizador_agudo do
+    modo = get(:modo)
+    if modo == :normal
+      synth :tech_saws, note: scale(:e4, :minor).choose, release: 0.35, amp: 1.9
+    else
+      synth :tech_saws, note: scale(:f3, :minor).choose, release: 0.8, amp: 0.2, cutoff: 80
+    end
+    sleep [0.125, 0.25, 0.375].choose
+  end
+end
+
+melodia = [:e4, :g4, :b4, :d5, :g5, :e5]
+
+with_fx :ping_pong, phase: 0.5 do
+  live_loop :moog_fluctuante do
+    modo = get(:modo)
+    if modo == :normal
+      synth :subpulse, note: melodia.choose, release: 0.2, cutoff: 110, amp: 1.5
+    else
+      synth :subpulse, note: melodia.choose, release: 0.6, cutoff: 70, amp: 0.2
+    end
+    sleep [0.25, 0.5].choose
+  end
+end
+
+live_loop :golpes do
+  modo = get(:modo)
+  if modo == :normal
+    sample [:drum_heavy_kick, :drum_snare_hard].choose, amp: 1.2
+  else
+    sample [:drum_cymbal_open, :drum_bass_soft].choose, amp: 0.2
+  end
+  sleep [0.25, 0.5].choose
+end
 
